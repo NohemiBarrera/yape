@@ -15,12 +15,14 @@ const format = morganjson({
   'response-time': ':response-time ms'
 });
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));  //dependencia que permite devolver un JSON
+app.use(bodyParser.json()); 
 app.use(express.static('public'));
-app.use(morgan(format));
-app.use('/static', express.static(path.join(__dirname, 'node_modules')));
-app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use(morgan(format));   //muestra mensaje en consola con un formato
+/*app.use('/static', express.static(path.join(__dirname, 'node_modules')));
+app.use('/static', express.static(path.join(__dirname, 'public')));*/
+
+app.use('/static', express.static(path.join(__dirname + '/node_modules'))); 
 
 let router = express.Router();
 
@@ -29,10 +31,10 @@ router.get('/', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-	res.sendFile(__dirname + '/index.html');
+	res.sendFile(__dirname + '/index.html'); //es necesario para que el servidor muestre algo, obvi el index
 });
 
-app.use('/api',apiUsers(router,db));
+app.use('/api',apiUsers(router,db));   //la ruta del api
 
 const port = process.env.PORT || 3000;
 
