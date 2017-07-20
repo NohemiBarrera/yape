@@ -4,7 +4,7 @@ const levelup         = require('levelup'); // Base de datos
 const morgan          = require('morgan'); // Sistema de logging (muestra en la cosa los request)
 const morganjson      = require('morgan-json');
 const apiUsers        = require('./api/users'); //Endpoints relacionados al User model
-const path			  = require('path');
+const path			  = require('path');	//provee utilidades para trabajar con rutas y directorios
 
 const app = express();
 const db  = levelup('./api/users', {valueEncoding: 'json'});
@@ -19,19 +19,12 @@ app.use(bodyParser.urlencoded({ extended: true }));  //dependencia que permite d
 app.use(bodyParser.json()); 
 app.use(express.static('public'));
 app.use(morgan(format));   //muestra mensaje en consola con un formato
-/*app.use('/static', express.static(path.join(__dirname, 'node_modules')));
-app.use('/static', express.static(path.join(__dirname, 'public')));*/
-
-app.use('/static', express.static(path.join(__dirname + '/node_modules'))); 
+app.use('/static', express.static(path.join(__dirname + '/node_modules'))); //path.dirname returns the directory name of a path
 
 let router = express.Router();
 
 router.get('/', (req, res) => {
   res.json({ name: 'yape-api',version: "0.0.1"});
-});
-
-app.get('/', (req, res) => {
-	res.sendFile(__dirname + '/index.html'); //es necesario para que el servidor muestre algo, obvi el index
 });
 
 app.use('/api',apiUsers(router,db));   //la ruta del api
