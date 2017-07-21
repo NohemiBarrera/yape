@@ -1,0 +1,12 @@
+#bcpImg{
+	width: 20vh;
+	height: 20vh;
+	margin-top: 10vh;
+}
+#only{
+	color: #8f8f8f;
+	font-size: .95rem;
+}
+#continue{
+	background-color: #fbd43b;
+}

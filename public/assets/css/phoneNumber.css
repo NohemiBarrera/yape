@@ -1,7 +1,5 @@
-.col-12 {
-width: 100%; 
-}
-.phoneImg{
+
+#phoneImg{
 	width: 20vh;
 	height: 20vh;
 }
@@ -10,4 +8,13 @@ width: 100%;
 }
 #introPhone{
 	margin-top: 5vh;
+}
+#continue{
+	background-color: #fbd43b;
+}
+#terminos{
+	color: #00c3a3;
+}
+p{
+	color: #8f8f8f;
 }

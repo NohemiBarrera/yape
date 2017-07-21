@@ -1,0 +1,24 @@
+#bcpImg{
+	width: 20vh;
+	height: 20vh;
+	margin-top: 10vh;
+}
+#only{
+	color: #8f8f8f;
+	font-size: .95rem;
+}
+#scan{
+	color: #00c3a3;
+	font-size: .85rem;
+	margin-top: -10px;	
+}
+h5{
+	font-size: 1.4rem;
+}
+#fecha{
+	color: #8f8f8f;
+}
+#continue{
+	background-color: #fbd43b;
+	margin-top: 30px;
+}
