@@ -1,13 +1,11 @@
-.lockImg{
+#bcpImg{
 	width: 20vh;
 	height: 20vh;
 	margin-top: 10vh;
 }
-p{
+#only{
 	color: #8f8f8f;
-}
-#gris{
-	color: #212121;
+	font-size: .95rem;
 }
 #continue{
 	background-color: #fbd43b;

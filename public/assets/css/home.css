@@ -1,0 +1,31 @@
+#happyImg{
+	width: 15vh;
+	height: 15vh;
+	margin-top: 10vh;
+}
+#happyFace{
+	background-color: #451e36;
+}
+#hola, #pago{
+	color: white;
+}
+#cactusImg{
+	width: 15vh;
+	height: 15vh;
+}
+#easy{
+	text-align: justify;
+}
+body{
+	background-color: #38052a;
+}
+#easy{
+	color: white;
+}
+#sendImg, #qrImg{
+	width: 12vh;
+	height: 12vh;
+}
+#pago{
+	margin-top: 20px;
+}
